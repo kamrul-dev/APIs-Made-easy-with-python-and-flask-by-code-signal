@@ -108,3 +108,18 @@ In this lesson, we explored how to enhance our Flask application by deploying it
 * The advantages of using Gunicorn over the built-in Flask server.
 Now, you are ready to try this on your own! The practice exercises following this lesson will give you a chance to apply what you've learned and solidify your understanding.
 
+
+
+
+# Lab Task Instructions
+=======================
+
+Great job setting up your Flask application with Gunicorn! Now, let's make a small modification to understand the flexibility in naming conventions.
+
+1. Change the Flask app instance name from app to my_app in the code.
+2. Update the Gunicorn command to gunicorn solution:my_app to reflect this change.
+
+This exercise will help you see how flexible Flask can be in naming your app instance.
+
+
+3. Now, let's modify the command used to launch the app with Gunicorn. This will help you understand how to specify the IP address and port number for your server. Change the command to bind (-b) the server to all IP addresses (0.0.0.0) on port 7000.
