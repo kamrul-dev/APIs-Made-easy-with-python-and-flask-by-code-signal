@@ -21,3 +21,20 @@ from flask import Flask
 app = Flask(__name__)
 In this snippet, we import the Flask class from the flask module and create an instance of it called app. This instance will be used to configure routes and handle HTTP requests.
 ```
+
+
+# Introducing Routes and Decorators
+A route in Flask is essentially a URL pattern that the web application responds to. We use decorators like @app.route to define these routes.
+
+```
+#Define a route with a decorator
+@app.route('/hello')
+def hello():
+    # Return a simple string response
+    return "Hello, World!"
+```
+In this example, the line @app.route('/hello') is a decorator that tells Flask to execute the hello function when the /hello URL is accessed.
+
+A decorator in Python is a special type of function used to modify the behavior of another function. In this case, @app.route modifies hello so that it reacts to web requests made to the /hello URL.
+
+The function hello handles the request and returns a simple string as the response. If you access http://localhost:5000/hello (assuming you are running on this IP and port), you will receive the text "Hello, World!".
