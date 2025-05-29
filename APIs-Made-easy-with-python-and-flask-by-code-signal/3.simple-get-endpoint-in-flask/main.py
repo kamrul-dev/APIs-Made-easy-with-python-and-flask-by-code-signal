@@ -8,3 +8,10 @@ app = Flask(__name__)
 def hello():
     # Return a simple string response
     return "Hello, World!"
+
+
+# Define a GET endpoint
+@app.route('/greet', methods=['GET'])
+def get_endpoint():
+    # Return a string
+    return "Hello! You have reached the GET endpoint!"
