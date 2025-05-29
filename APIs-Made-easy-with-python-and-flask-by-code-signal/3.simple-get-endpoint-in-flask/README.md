@@ -1,5 +1,6 @@
 # Creating a Simple GET Endpoint in Flask
 
+# UNIT-3
 Welcome to this lesson on creating a simple GET endpoint in Flask. In our previous lessons, you've learned how to set up and run a Flask application. Now, we'll dive into routing, a fundamental concept in web development.
 
 
@@ -80,3 +81,11 @@ In this lesson, you learned how to create a simple GET endpoint in Flask. We int
 
 Now that you understand the basics of creating GET endpoints, you can move on to the practice exercises to solidify your knowledge. These exercises will help you apply what you’ve learned and prepare you for more advanced concepts in Flask web development.
 
+
+
+# Lab Task Instructions
+=============================
+
+1. Write a Flask application that defines a GET endpoint with a fun twist:
+2. Define the GET endpoint at the path /funny.
+3. It should return the string: "Why don't scientists trust atoms? Because they make up everything!".
