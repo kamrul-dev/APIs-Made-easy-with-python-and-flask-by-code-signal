@@ -14,3 +14,11 @@ def greet_default():
 @app.route('/greet/<name>', methods=['GET'])
 def greet(name):
     return jsonify(message=f"Greetings, {name}! Welcome to the dynamic route.")
+
+
+
+@app.route('/greet/<first_name>/<last_name>', methods=['GET'])
+def greet_full_name(first_name, last_name):
+    return jsonify(message=f"Greetings, {first_name} {last_name}!")
+
+    

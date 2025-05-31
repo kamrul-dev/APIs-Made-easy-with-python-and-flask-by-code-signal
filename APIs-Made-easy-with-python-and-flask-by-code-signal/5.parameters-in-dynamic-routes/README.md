@@ -50,3 +50,40 @@ def greet(name):
 This way, when someone navigates to /greet, Flask will call the greet_default function and return the default greeting message. When someone navigates to /greet/<name>, Flask will call the greet function, substituting <name> with the specific value provided in the URL.
 
 Flask distinguishes between these routes based on the structure of the URL, ensuring that the correct function is called.
+
+
+# Using Multiple Path Parameters
+You can also define routes with multiple path parameters. For example, if you want to create a route that captures both a user's first and last name, you can do it like this:
+
+```
+@app.route('/greet/<first_name>/<last_name>', methods=['GET'])
+def greet_full_name(first_name, last_name):
+    return jsonify(message=f"Greetings, {first_name} {last_name}!")
+```
+
+For instance, navigating to /greet/John/Smith would capture John as first_name and Smith as last_name, resulting in a response like this:
+
+```
+{
+    "message": "Greetings, John Smith!"
+}
+```
+
+# Discussion of Use Cases
+Dynamic routes with path parameters are highly useful in web applications. Here are some common use cases:
+
+* User Profiles: Create routes that capture user IDs to return profile information
+    * /user/<user_id>.
+* E-commerce: Define routes for product categories or specific products
+    * /products/<category> or /products/<category>/<product_id>.
+
+These examples demonstrate how dynamic routes make your web applications more flexible and user-friendly.
+
+
+# Summary and Next Steps
+In this lesson, you learned about using path parameters to create dynamic routes in Flask. We covered:
+
+* Setting up a Flask application.
+* Understanding and defining path parameters in routes.
+
+Next, you'll get hands-on practice with interactive exercises to reinforce what you've learned. As always, practicing these concepts will help solidify your knowledge. The upcoming lessons will build on these fundamentals to create more advanced APIs.
