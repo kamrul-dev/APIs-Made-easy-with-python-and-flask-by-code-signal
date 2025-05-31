@@ -32,3 +32,21 @@ When you navigate to /greet/John, for example, Flask captures John as the name p
     "message": "Greetings, John! Welcome to the dynamic route."
 }
 ```
+
+
+# Handling Routes with and without Parameters
+Flask can handle routes that have parameters and ones that don't, even if they share a common base. For example, you can define both a route without a parameter and a route with a parameter like this:
+
+```
+@app.route('/greet', methods=['GET'])
+def greet_default():
+    return jsonify(message="Greetings! Welcome to the default greeting.")
+
+@app.route('/greet/<name>', methods=['GET'])
+def greet(name):
+    return jsonify(message=f"Greetings, {name}! Welcome to the dynamic route.")
+```
+
+This way, when someone navigates to /greet, Flask will call the greet_default function and return the default greeting message. When someone navigates to /greet/<name>, Flask will call the greet function, substituting <name> with the specific value provided in the URL.
+
+Flask distinguishes between these routes based on the structure of the URL, ensuring that the correct function is called.
