@@ -87,3 +87,19 @@ In this lesson, you learned about using path parameters to create dynamic routes
 * Understanding and defining path parameters in routes.
 
 Next, you'll get hands-on practice with interactive exercises to reinforce what you've learned. As always, practicing these concepts will help solidify your knowledge. The upcoming lessons will build on these fundamentals to create more advanced APIs.
+
+
+
+
+
+# Task Instruction
+# =========================
+Great job making it this far! You've now reached the final task of this unit. Let's put what you've learned into practice.
+
+Write a Flask application that defines a dynamic route with a path parameter.
+
+The dynamic route should:
+
+1. Capture a city from the URL path using the /weather base URL.
+2. Return a JSON response that states the weather forecast for the city, such as:
+  * "The weather in London is sunny."
