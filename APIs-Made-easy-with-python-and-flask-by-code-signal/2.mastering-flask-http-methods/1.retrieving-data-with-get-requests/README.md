@@ -125,3 +125,22 @@ It's now time to put your newfound knowledge to the test! Dive into the practice
 
 Get ready to flex your coding muscles and have some fun exploring the power of Flask!
 
+
+
+# Lab Task Instructions
+## ============================
+
+# It's time to show you've mastered retrieving data with GET requests in Flask.
+
+Your task is to:
+
+Set up a GET endpoint at the URL /all_profiles to retrieve all profiles from the mock database.
+Set up another GET endpoint at the URL `/profiles/<int:profile_id> `to retrieve a single profile by ID.
+Here's a generic code example of how to search for an item in a list of dictionaries:
+
+```
+for item in item_list:
+    if item['id'] == item_id:
+        return item
+
+```
