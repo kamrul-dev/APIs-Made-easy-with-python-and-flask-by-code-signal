@@ -132,3 +132,27 @@ In this lesson, you learned how to handle POST requests to create new data in a 
 * Returning appropriate HTTP responses
 
 These concepts are essential for building dynamic web applications that can handle user input and create new resources. In the upcoming practice exercises, you will get hands-on experience with creating POST requests and reinforcing what you've learned in this lesson. Great job so far, and let's move forward!
+
+
+
+# Lab Task Instructions
+
+The task now is to write a POST endpoint for adding a new article to a mock database.
+
+This endpoint should:
+
+Accept JSON data with title.
+Validate the presence of the title field.
+Generate a unique ID for the new article.
+Append the new article to the mock database.
+Return the newly added article along with a status code of 201 (Created).
+
+
+
+Example of generating a new ID and appending an item:
+
+```
+new_id = max(item['id'] for item in database) + 1
+new_item['id'] = new_id
+database.append(new_item)
+```
